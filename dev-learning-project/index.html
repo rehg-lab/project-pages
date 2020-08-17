@@ -11,7 +11,7 @@
       <meta name="author" content="Stefan Stojanov, Anh Thai">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
- 
+
 <div class="header">
   <h1>Developmental Machine Learning</h1>
 <!--  <p class="authors">
@@ -26,7 +26,7 @@
 <!--  <span class="footnote">
     * equal contribution
   </p> -->
-</div>     
+</div>
 
 <!-- <div class="links">
 
@@ -36,7 +36,7 @@
       </a>
       <div class="desc">Code</div>
     </div>
-    
+
     <div class="gallery">
       <a target="_blank" href="https://arxiv.org/abs/2006.07752">
 	<img src="img/paper_img.png" alt="arxiv link">
@@ -50,67 +50,75 @@
 
 <!-- <h1> Abstract </h1>
 <p>
-A key challenge in single image 3D shape reconstruction is to ensure that deep models designed for single-view shape prediction can generalize to shapes which were not part of the training set. We find that such generalization to unseen categories of objects is a function of both architecture design and object pose representation during training. This paper introduces SDFNet, a novel shape prediction architecture and a training approach which supports effective generalization. We provide an extensive investigation of the factors that influence generalization accuracy and its measurement, ranging from the consistent use of 3D shape metrics to the choice of rendering parameters. We show that SDFNet provides state-of-the-art performance on seen and unseen shapes relative to existing baseline methods. We provide the first large-scale experimental evaluation of generalization performance on the complete ShapeNetCore.v2 dataset. 
+A key challenge in single image 3D shape reconstruction is to ensure that deep models designed for single-view shape prediction can generalize to shapes which were not part of the training set. We find that such generalization to unseen categories of objects is a function of both architecture design and object pose representation during training. This paper introduces SDFNet, a novel shape prediction architecture and a training approach which supports effective generalization. We provide an extensive investigation of the factors that influence generalization accuracy and its measurement, ranging from the consistent use of 3D shape metrics to the choice of rendering parameters. We show that SDFNet provides state-of-the-art performance on seen and unseen shapes relative to existing baseline methods. We provide the first large-scale experimental evaluation of generalization performance on the complete ShapeNetCore.v2 dataset.
 </p> -->
 
     <p>
-      Children are phenomenal learning machines, and human learning has long been an inspiration for 
-	  machine learning and AI. In this project, we are developing novel machine learning methods which 
+      Children are phenomenal learning machines, and human learning has long been an inspiration for
+	  machine learning and AI. In this project, we are developing novel machine learning methods which
 	  are inspired by developmental science. We are also using machine learning tools to gain novel insights
 	  into the mechanisms of child development. While developmental ML intersects with standard ML topics such as continual learning,
 	  active learning, multi-task learning, etc., most of the key properties of human learners (HL) have no analog in current ML
 	  technology:
-	  
+
 	  <ul>
       	  <li>HL must create the tasks which they are solving by deciding which aspects of the world should be modeled</li>
       	  <li>HL must infer the supervisory signal that guides learning from their environment</li>
       	  <li>point 3 ...</li>
-      </ul>  
-	  
+      </ul>
+
 	  We are currently pursuing the following four research directions:
 	  <ul>
       	  <li>Continual visual learning with repetition</li>
       	  <li>Single image 3D shape reconstruction</li>
 		  <li>CRIB visual simulator for developmental ML</li>
       	  <li>Modeling the statistical properties of infant visual object experiences</li>
-      </ul>  
+      </ul>
 	  </p>
-	  
+
 	  <!--   CONTINUAL LEARNING  -->
 
 	  <h1> Continual visual learning with repetition </h1>
-	  <p> 
+	  <p>
 	  Most work in continual learning adopts a paradigm in which a fixed amount of training data is processed sequentially, so that the learner has a single exposure
 	  to each target concept. This
 	  approach is focused on addressing catastrophic forgetting, which arises when the representation of a previously-learned concept becomes degraded. However, the
-	  single exposure case is highly unnatural. The visual experiences of human and animal learners are defined by repeated exposures to important concept classes. 
-	  We have demonstrated <a href="#CLRep">[1]</a> that the repeated exposures paradigm largely ameliorates the problem of catastrophic forgetting. In this setting, a continual learner 
+	  single exposure case is highly unnatural. The visual experiences of human and animal learners are defined by repeated exposures to important concept classes.
+	  We have demonstrated <a href="#CLRep">[1]</a> that the repeated exposures paradigm largely ameliorates the problem of catastrophic forgetting. In this setting, a continual learner
 	  with a modest amount of episodic memory can approach the accuracy of batch learning.
 	  </p>
-	  
+
 	  <p>
 	  <b>INSERT LEARNING WITH REPETITIONS FIGURE HERE
 	  Let's have a caption with brief description </b>
 	  </p>
-	  
-	  
-	  
+
+
+
 	  <!--   3D SHAPE RECONSTRUCTION -->
-	  
+
 	  <h1> Single image 3D shape reconstruction </h1>
-	  <p> 
-	  Children learn to recover properties of 3D object shape well before they acquire facility in object categorization, and experience with shape may enable 
+	  <p>
+	  Children learn to recover properties of 3D object shape well before they acquire facility in object categorization, and experience with shape may enable
 	  rapid object learning. The ability to learn 3D object shape from visual inputs is therefore a core building block in developmental approaches to visual learning. We have recently
-	  developed a novel architecture, <i>SDFNet</i> <a href="#SDFNet">[2]</a>, for supervised single image 3D shape reconstuction. Given a single RGB image of an object in an arbitrary pose, SDFNet  
-	  can output a 3D model of the object encoded as a signed distance field. <b>ADD A FEW MORE DETAILS FROM OUR PAPER</b>.
-	  
+	  developed a novel architecture, <i>SDFNet</i> <a href="#SDFNet">[2]</a>, for supervised single image 3D shape reconstuction. Given a single RGB image of an object in an arbitrary pose, SDFNet
+	  can output a 3D model of the object encoded as a signed distance field.</p>
+
+    <p>
+    Our work identified three key issues that affect generalization performance in 3D shape reconstruction: the choice of coordinate representation, the benefit of intermediate representations (depth and normal sketches)
+    and the importance of realistic rendering. The last issue that we investigated regards large-scale evaluation of generalization. We are the first to show that 3-DOF viewer centered
+    coordinate representation experiences no drop in reconstruction performance on novel classes and there is a significant room for improvement in performance of the 2.5D regressor. We demonstrated that
+    lighting variability and reflectance significantly impact reconstruction performance (0.31 for F-Score@1). We conducted our generalization evaluation on the largest scale to date and outperformed state-of-the-art baselines.
+
+    <!-- <b>ADD A FEW MORE DETAILS FROM OUR PAPER</b>. -->
+
 	  <div class="gifs">
       	   <div class="container">
            		<div class="desc">Seen Class</div>
       	   		<div class="gallery">
           			 <img class="gif" src="img/airplane_PRED.gif" >
         			 <div class="desc">Predicted</div>
-      	   		</div>     
+      	   		</div>
 	       		<div class="gallery">
            			 <img class="gif" src="img/airplane_GT.gif" >
         			 <div class="desc">Ground Truth</div>
@@ -140,44 +148,44 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
     		</div>
 	  </div>
 	  <div class="desc">SDFNet reconstruction performance on classes seen during training and novel classes not seen during training</div>
-	  
-	  
+
+
 
 	  <!--   CRIB SIMULATOR FOR VISUAL EXPERIENCES -->
-	  
+
 	  <h1> CRIB visual simulator for developmental ML </h1>
-	  <p> 
+	  <p>
 	  The creation and validation of computational models of development can be facilitated by access to continous streams of visual imagery
-	  which mirror the statistical structured of the visual inputs that infants create during learning. While wearable cameras make it possible 
+	  which mirror the statistical structured of the visual inputs that infants create during learning. While wearable cameras make it possible
 	  to record egocentric video from children in naturalistic settings, such datasets are inherently limited in scope and size. We have taken
 	  a first step towards creating a simulator that can generate unlimited amounts of visual data that mirror the types of self-generated visual experiences
 	  produced by children during object play.
 	  </p>
-	  
+
 	  <p>
 	  <b>LET'S ADD A FEW EXAMPLES OF THE TRAINING VIDEO CLIPS PRODUCED BY CRIB FROM THE OTHER SITE</b>
 	  </p>
-	  
-	  
+
+
 
 	  <!--   MODELING THE STATISTICAL PROPERTIES OF INFANT VISUAL OBJECT EXPERIENCES -->
-	  
+
 	  <h1> Modeling the statistical properties of infant visual object experiences </h1>
 	  <p>The ability to deploy infant-wearable cameras into the home environment, pioneered by Drs. Linda Smith and Chen Yu at Indiana Univ., has enabled the quantitative characterization
 	  of visual experiences in early infancy. The distribution of objects comprising the infant's visual experiences
 	  is highly right-skewed, with a small number of categories of familiar objects predominating. Moreover, the names of the objects occurring with
-	  high-frequency are among the very first object names that are normatively learned first by infants <a href="#EarlyStat">[3]</a>. These findings suggest that 
-	  the power law distribution of early object experiences may play a role in facilitating infant object learning. We tested this hypothesis indirectly using a  
+	  high-frequency are among the very first object names that are normatively learned first by infants <a href="#EarlyStat">[3]</a>. These findings suggest that
+	  the power law distribution of early object experiences may play a role in facilitating infant object learning. We tested this hypothesis indirectly using a
 	  novel iterative machine teaching paradigm <a href="#IterTeach">[4]</a>. In this approach, a teacher network selects labeled examples to send to student network,
-	  with the examples chosen to optimize the student's learning rate. Using labeled egocentric images collected from infants as a training dataset, we compared the 
+	  with the examples chosen to optimize the student's learning rate. Using labeled egocentric images collected from infants as a training dataset, we compared the
 	  statistical properties of object orderings produced by the teaching network to the properties observed in naturalistic infant data. As shown below, the teacher-optimized
-	  distribution exhibits a qualitiative similarity to the natural distribution.  
+	  distribution exhibits a qualitiative similarity to the natural distribution.
 	  </p>
-	  
-	  
+
+
 
 	  <!--   MEMBERS AND COLLABORATORS -->
-	  
+
 	  <h1> Personnel </h1>
 	  <ul>
 	  	  <li>Project Members at Georgia Tech</li>
@@ -198,26 +206,26 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 			  <li><a href="https://about.me/charlene.tay">Charlene Tay</a> (Indiana Univ.)</li>
 			  <li><a href="https://psych.indiana.edu/directory/faculty/smith-linda.html">Dr. Linda B. Smith</a> (Indiana Univ.)</li>
 			  <li><a href="https://liberalarts.utexas.edu/psychology/faculty/cy2856">Dr. Chen Yu</a> (UT Austin)</li>
-			  </ul>		  
+			  </ul>
 		  </ul>
 
-		  	  
+
 
 	  <!--   PROJECT FUNDING -->
 
 	  <h1> Project Funding </h1>
 	  <ul>
-	  	  <li> NSF Awards <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1320348">RI 1320348</a>,  
-		  	   <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1524565">BCS 1524565</a>, 
+	  	  <li> NSF Awards <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1320348">RI 1320348</a>,
+		  	   <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1524565">BCS 1524565</a>,
 			   <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1936970">RAISE 1936970</a></li>
 	      <li> Gifts from Xerox PARC and Intel Research</li>
 		  </ul>
-	  
+
 
 		  <!--
 <p>
   When evaluated on 3 Degree-of-Freedom Viewer Centered (3 DOF VC)&mdash;object pose varies along azimuth, elevation and tilt,
-  our empirical findings show marginal decrease in performance between seen and unseen classes for the 3 DOF VC model. 
+  our empirical findings show marginal decrease in performance between seen and unseen classes for the 3 DOF VC model.
   This is new evidence that it is possible to learn a general shape representation with correct depth estimation and 3 DOF VC training.
   </p>
 <center><img src="img/representation_img.png" ></center>
@@ -237,23 +245,22 @@ To further test the generalization ability of SDFNet, we train it one one shape 
 
 <h1> References  </h1>
 <ol>
-    <li><a name="CLRep">Stojanov, S.</a>, Mishra, S., Thai, N. A., Dhanda, N., Humayun, A., Yu, C., Smith, L. B., and Rehg, J. M. (2019). 
+    <li><a name="CLRep">Stojanov, S.</a>, Mishra, S., Thai, N. A., Dhanda, N., Humayun, A., Yu, C., Smith, L. B., and Rehg, J. M. (2019).
 		<a href="https://iolfcv.github.io/">Incremental Object Learning from Contiguous Views.</a> In <i>Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR 19)</i>.</li>
-	<li><a name="SDFnet">Thai, A.</a>, Stojanov, S., Upadhya, V., Rehg, J. M. (2020). 
+	<li><a name="SDFnet">Thai, A.</a>, Stojanov, S., Upadhya, V., Rehg, J. M. (2020).
 		<a href="https://devlearning-gt.github.io/3DShapeGen/">3D Reconstruction of Novel Object Shapes from Single Images.</a> <cite>arXiv preprint:2006.07752.</cite></li>
-	<li><a name="EarlyStat">Clerkin, E. M.</a>, Hart, E., Rehg, J. M., Yu, C., & Smith, L. B. (2017). 
+	<li><a name="EarlyStat">Clerkin, E. M.</a>, Hart, E., Rehg, J. M., Yu, C., & Smith, L. B. (2017).
 		<a href="https://royalsocietypublishing.org/doi/full/10.1098/rstb.2016.0055">Real-world visual statistics and infants’ first-learned object names.</a>
 		<i>Phil. Trans. of the Royal Society B: Biological Sciences</i>, 372(20160055), 1–10.</li>
-	<li><a name="IterTeach">Liu, W.</a>, Dai, B., Humayun, A., Tay, C., Yu, C., Smith, L. B., Rehg, J. M., and Song, L. (2017). 
+	<li><a name="IterTeach">Liu, W.</a>, Dai, B., Humayun, A., Tay, C., Yu, C., Smith, L. B., Rehg, J. M., and Song, L. (2017).
 		<a href="https://arxiv.org/abs/1705.10470">Iterative Machine Teaching.</a> In <i>Proc. 34th Intl. Conf. on Machine Learning (ICML 17)</i> (p. PMLR 70:2149-2158).</li>
-		  
+
 <!--
-		  <li><a name="GenRe">Zhang, X., Zhang, Z., Zhang, C., Tenenbaum, J., Freeman, B., & Wu, J. (2018). Learning to reconstruct shapes from unseen classes. 
+		  <li><a name="GenRe">Zhang, X., Zhang, Z., Zhang, C., Tenenbaum, J., Freeman, B., & Wu, J. (2018). Learning to reconstruct shapes from unseen classes.
       In <cite>Advances in Neural Information Processing Systems </cite>(pp. 2257-2268).</a></li>
-    <li><a name="OccNet">Mescheder, L., Oechsle, M., Niemeyer, M., Nowozin, S., & Geiger, A. (2019). 
+    <li><a name="OccNet">Mescheder, L., Oechsle, M., Niemeyer, M., Nowozin, S., & Geiger, A. (2019).
       Occupancy networks: Learning 3d reconstruction in function space. In <cite>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition </cite>(pp. 4460-4470).</a></li>
 	  -->
-  </ol> 
+  </ol>
 
-</div>     
-
+</div>
