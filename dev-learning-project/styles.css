@@ -11,7 +11,7 @@
   background: rgb(0, 38, 58);
   color: #f2f2f2;
   font-size: 12pt;
-  font-family: Helvetica, sans-serif;
+  font-family: Tahoma, sans-serif;
   border-radius: 5px;
 }
 
@@ -61,7 +61,7 @@
 
 .links {
     font-size: 12pt;
-    font-family: Helvetica, sans-serif;
+    font-family: Tahoma, sans-serif;
     margin: auto;
     width: min(80%, 1000px);
     height: auto;
@@ -95,28 +95,32 @@
 }
 
 .content {
-  font-family: Helvetica, sans-serif;
+  font-family: Tahoma, sans-serif;
   margin: auto;
-  width: min(80%, 1000px);
+  width: min(60%, 750px);
 }
 
 .content p {
-  font-size: 12pt;
-  line-height: 1.4;
-  font-family: Helvetica, sans-serif;
-  text-align: justify;
+  font-size: 13pt;
+  line-height: 1.5;
+  font-family: Tahoma, sans-serif;
+  text-align: left;
 }
 
 .content h1{
-  font-size: calc(24px + 0.5vw);
-  font-weight: 200;
+  font-size: calc(28px + 0.5vw);
+  font-weight: 400;
+  padding-bottom: min(10%, 15px);
+  padding-top: min(10%, 15px);
 }
 
 .content h2{
-  font-size: calc(16px + 0.5vw);
+  font-size: calc(20px + 0.5vw);
   font-weight: 200;
   text-align: center;
   padding: 0;
+  padding-bottom: min(10%, 15px);
+  padding-top: min(10%, 15px);
   margin: 0;
 }
 
@@ -132,7 +136,7 @@
 .gifs {
     /*font-size: 9pt;*/
     font-size: calc(5pt + 0.5vw);
-    font-family: Helvetica, sans-serif;
+    font-family: Tahoma, sans-serif;
     margin: auto;
     /* width: 100%; */
 
@@ -168,7 +172,7 @@
 }
 
 .container {
-  font-family: Helvetica, sans-serif;
+  font-family: Tahoma, sans-serif;
   margin: auto;
   width: min(100%, 1000px);
   padding: 0px;
@@ -178,9 +182,8 @@
   text-align: center;
 }
 
-
 .container_gif {
-  font-family: Helvetica, sans-serif;
+  font-family: Tahoma, sans-serif;
   margin: auto;
   width: min(100%, 1000px);
   padding: 0px;
@@ -204,3 +207,46 @@
   border-color: black;
 }
 
+.personnel_gallery {
+    font-size: 12pt;
+    font-family: Tahoma, sans-serif;
+    margin: auto;
+    /* width: 100%; */
+
+    width: min(100%, 1000px);
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.personnel_gallery h1{
+  font-size: calc(28px + 0.5vw);
+  font-weight: 400;
+  padding-bottom: min(10%, 15px);
+  padding-top: min(10%, 15px);
+  width: min(70%, 1000px);
+  justify-content: center;
+}
+
+.personnel_gallery .column{
+  float: left;
+  width: 20%;
+  padding: 10px;
+  text-align: center
+}
+
+.personnel_gallery .column div.desc {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.personnel_gallery .column img{
+    border-radius: 15px;
+}
+
+.personnel_gallery .column a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
