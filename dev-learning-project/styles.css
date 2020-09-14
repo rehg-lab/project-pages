@@ -243,7 +243,10 @@
 }
 
 .personnel_gallery .column img{
+    object-fit:cover;
     border-radius: 15px;
+    width: min(150px, 15vw);
+    height: min(150px, 15vw);
 }
 
 .personnel_gallery .column a {
