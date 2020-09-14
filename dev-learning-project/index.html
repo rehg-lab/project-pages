@@ -79,21 +79,17 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 	  <!--   CONTINUAL LEARNING  -->
 
 	  <h1> Continual visual learning with repetition </h1>
-	  <p>
-	  Most work in continual learning adopts a paradigm in which a fixed amount of training data is processed sequentially, so that the learner has a single exposure
-	  to each target concept. This
-	  approach is focused on addressing catastrophic forgetting, which arises when the representation of a previously-learned concept becomes degraded. However, the
-	  single exposure case is highly unnatural. The visual experiences of human and animal learners are defined by repeated exposures to important concept classes.
-	  We have demonstrated <a href="#CLRep">[1]</a> that the repeated exposures paradigm largely ameliorates the problem of catastrophic forgetting. In this setting, a continual learner
-	  with a modest amount of episodic memory can approach the accuracy of batch learning.
-	  </p>
-
-	  <p>
-	  <b>INSERT LEARNING WITH REPETITIONS FIGURE HERE
-	  Let's have a caption with brief description </b>
-	  </p>
-
-
+	  <p> Most work in continual learning adopts a paradigm in which a fixed amount of training data is processed sequentially, so that the learner has a single exposure
+	    to each target concept. This
+	    approach is focused on addressing catastrophic forgetting, which arises when the representation of a previously-learned concept becomes degraded. However, the
+	    single exposure case is highly unnatural. The visual experiences of human and animal learners are defined by repeated exposures to important concept classes.
+	    We have demonstrated <a href="#CLRep">[1]</a> that the repeated exposures paradigm largely ameliorates the problem of catastrophic forgetting. In this setting, a continual learner
+	    with a modest amount of episodic memory can approach the accuracy of batch learning. </p>
+	  
+	  <figure>
+	     <img src="img/rep_exp.png" style="width:90%" alt="">    <!-- width="1877" height="777" -->
+		  <figcaption>Example of continual learning with repeated exposure. Accuracy as a function of learning exposures, for 200 toy instances repeated 10 times in a random (shuffled) order.</figcaption>
+	  </figure>
 
 	  <!--   3D SHAPE RECONSTRUCTION -->
 
@@ -207,8 +203,8 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 	  the power law distribution of early object experiences may play a role in facilitating infant object learning. We tested this hypothesis indirectly using a
 	  novel iterative machine teaching paradigm <a href="#IterTeach">[4]</a>. In this approach, a teacher network selects labeled examples to send to student network,
 	  with the examples chosen to optimize the student's learning rate. Using labeled egocentric images collected from infants as a training dataset, we compared the
-	  statistical properties of object orderings produced by the teaching network to the properties observed in naturalistic infant data. As shown below, the teacher-optimized
-	  distribution exhibits a qualitiative similarity to the natural distribution.
+	  statistical properties of object orderings produced by the teaching network to the properties observed in naturalistic infant data. Our findings demonstrate a
+      qualitative similarity between the infant image ordering and the example ordering produced by the teacher.
 	  </p>
 
 
