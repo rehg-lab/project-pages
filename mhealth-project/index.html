@@ -54,36 +54,25 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 </p> -->
 
     <p>
-      Children are phenomenal learning machines, and human learning has long been an inspiration for
-	  machine learning and AI. In this project, we are developing novel machine learning methods which
-	  are inspired by developmental science. We are also using machine learning tools to gain novel insights
-	  into the mechanisms of child development. While developmental ML intersects with standard ML topics such as continual learning,
-	  active learning, multi-task learning, etc., most of the key properties of human learners have no analog in current ML
-	  technology:
+	The development of effective treatments for chronic diseases, such as heart disease, diabetes, cancer, and Alzheimer’s, is a key global healthcare challenge. These conditions are primary drivers of healthcare spending and have a deleterious effect on quality of life and mortality. They are inextricably linked to modifiable health-related behavioral risk factors such as smoking, poor diet, and lack of physical activity.
+
+		Mobile health technology <a href="#MHBook">[Rehg-book]</a> provides a novel tool for supporting lifestyle modifications via behavioral interventions that can provide personalized guidance to patients, thereby reducing their risk factors and improving health outcomes. While app-based therapies based on self-report data (i.e. EMA) are increasingly available, passive sensing from wearables holds the promise of continuously monitoring key physiological and contextual variables, thereby providing long-term insight into patterns of behavior and risk at low burden to participants.
+
+	We are developing novel biomarkers from wearable sensors to capture physiological and contextual variables, and machine learning methods for modeling longitudinal data. We work with the <a href="https://mdot.md2k.org/">mDOT</a> and <a href="https://md2k.org/">MD2K</a> <a href="#MD2KJamia">[Kumar-JAMIA]</a> centers and have a broad set of collaborators in engineering, behavioral science, and statistics, with a focus on smoking, sedentary behavior, and substance abuse. We currently work in three research areas:
 
 	  <ul>
-   	    <li>Human learners must create the tasks which they are solving by deciding what to learn</li>
-      	  <li>Human learners must infer the supervisory signals that guide learning from their environment</li>
-      	  <li>Human learners must learn continuously without the ability to access complete datasets</li>
-      </ul>
-
-	  We are currently pursuing the following four research directions:
-	  <ul>
-   	    <li>Novel biosensors for cardiovascular function</li>
-      	  <li>Prediction of adverse health outcomes </li>
-		  <li>Modeling and imputing missing data in mHealt</li>
+   	    <li>Biomarkers for physiological and contextual risk factors</li>
+      	  <li>Predictions of adverse outcomes from event data</li>
+      	  <li>Modeling and imputing missing measurements in longitudinal data</li>
       </ul>
 	  </p>
 
-	  <!--   CONTINUAL LEARNING  -->
+	  <!--   BIOMARKERS  -->
 
-  <h1> Novel biosensors for cardiovascular function&nbsp; </h1>
-	  <p> Most work in continual learning adopts a paradigm in which a fixed amount of training data is processed sequentially, so that the learner has a single exposure
-	    to each target concept. This
-	    approach is focused on addressing catastrophic forgetting, which arises when the representation of a previously-learned concept becomes degraded. However, the
-	    single exposure case is highly unnatural. The visual experiences of human and animal learners are defined by repeated exposures to important concept classes.
-	    We have demonstrated <a href="#CLRep">[1]</a> that the repeated exposures paradigm largely ameliorates the problem of catastrophic forgetting. In this setting, a continual learner
-	    with a modest amount of episodic memory can approach the accuracy of batch learning. </p>
+  <h1> Biomarkers for physiological and contextual risk factors</h1>
+
+	  <p> We are collaborating with the <a href="https://irl.gatech.edu/">Inan Lab</a> in developing novel biomarkers for hemodynamic parameters, such as pulmonary capillary wedge pressure, and in developing predictive models for heart failure (HF) clinical status (i.e. compensated vs decompensated). Decompensation in HF is a key driver of rehospitalization, resulting in increased mortality risk and cost of care. Using an implantable device to measure pulmonary artery pressure and titrate treatment has been shown to reduce the risk of decompensation, but the procedure is invasive, expensive, and unsuitable for some patients. We are exploring ballistocardiography and seismocardiography as a means to estimate heart failure status by measuring and analyzing the small vibrations that propagate through the body due to the mechanical action of the heart. Ballistocardiography (BCG) uses a modified weighing scale, and we have demonstrated classification of HF decompensation at an AUC of 0.78 using BCG data collected in a home environment <a href="#BCG">[Burak-TBME]</a>. Seismocardiography uses an accelerometer placed on the chest and is currently under investigation.</p>
+
 	  
 	  <figure>
 	     <img src="img/rep_exp.png" style="width:90%" alt="">    <!-- width="1877" height="777" -->
