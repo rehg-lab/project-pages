@@ -75,13 +75,43 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
   <h1> Biomarkers for physiological and contextual risk factors</h1>
 
 	  <p> We are collaborating with the <a href="https://irl.gatech.edu/">Inan Lab</a> in developing novel biomarkers for hemodynamic parameters, such as pulmonary capillary wedge pressure, and in developing predictive models for heart failure (HF) clinical status (i.e. compensated vs decompensated). Decompensation in HF is a key driver of rehospitalization, resulting in increased mortality risk and cost of care. Using an implantable device to measure pulmonary artery pressure and titrate treatment has been shown to reduce the risk of decompensation, but the procedure is invasive, expensive, and unsuitable for some patients. We are exploring ballistocardiography and seismocardiography as a means to estimate heart failure status by measuring and analyzing the small vibrations that propagate through the body due to the mechanical action of the heart. Ballistocardiography (BCG) uses a modified weighing scale, and we have demonstrated classification of HF decompensation at an AUC of 0.78 using BCG data collected in a home environment <a href="#BCG">[Burak-TBME]</a>. Seismocardiography uses an accelerometer placed on the chest and is currently under investigation.</p>
-
 	  
 	  <figure>
 	     <img src="img/scg_example.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
-		  <figcaption>Example of continual learning with repeated exposure. Accuracy as a function of learning exposures, for 200 toy instances repeated 10 times in a random (shuffled) order.</figcaption>
+		  <figcaption>Seismocardiography (SCG) signals from a wearable patch attached to the sternum. ECG and 3-axis accelerometery capture the electrical and mechanical signatures of heart beats</figcaption>
 	  </figure>
 
+	  <p>
+	  We are also developing biomarkers for contextual variables based on passively-collected signals from wearable sensors. We have collaborated with the MD2K center in developing a biomarker for smoking opportunity, which captures the situational factors (such as proximity to locations in which smoking is permitted) which can precipitate relapse during a quit attempt <a href="#Context">[Moreno-IMWUT]</a>. We have also developed a novel biomarker that uses a wearable camera to quantify exposure to screens, a known risk factor for sedentary behavior <a href="#TV">[Yun-TV]</a>. Below we illustrate several examples of attention to TVs and mobile devices inferred from wearable camera video (without eye tracking). A key challenge in contextual sensing is the accurate synchronization of multiple wearable modalities, and in particular wearable cameras, to a common timeline. We have developed an automatic synchronization approach, known as SyncWISE, and have demonstrated its effectiveness in aligning video and accelerometry signals <a href="#Sync">[Yun-Synch]</a>.</p>
+	  
+	      <div class="gifs">
+          <div class="container">
+              <div class="gallery">
+                 <img class="gif" src="http://drive.google.com/uc?export=view&id=1OMwDPu1vMeDplpmXkzKbcbww2g3KvsqQ" >
+                 <div class="desc">Plane</div>
+
+              </div>
+            <div class="gallery">
+               <img class="gif" src="http://drive.google.com/uc?export=view&id=1LtPrzfP0U5pMGXZnCRJR6HIrqRrybQpc" >
+               <div class="desc">Cup</div>
+
+            </div>
+          </div>
+          <div class="container">
+
+            <div class="gallery">
+               <img class="gif" src="http://drive.google.com/uc?export=view&id=1ARuGSONsHcasfyIUXfcKrEmrddJ8AUZT" >
+               <div class="desc">Truck</div>
+
+            </div>
+           <div class="gallery">
+              <img class="gif" src="http://drive.google.com/uc?export=view&id=1KVpeB0-HMnPrC-Fq1lYKMYqnLh0feQAk" >
+              <div class="desc">Bee</div>
+
+           </div>
+         </div>
+
+	  
 	  <!--   3D SHAPE RECONSTRUCTION -->
 
 	  <h1> Single image 3D shape reconstruction </h1>
