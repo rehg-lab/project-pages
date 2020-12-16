@@ -94,8 +94,8 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
                <img class="gif" src="http://drive.google.com/uc?export=view&id=1LtPrzfP0U5pMGXZnCRJR6HIrqRrybQpc" >
                <div class="desc">Cup</div>
             </div>
-          </div>
-          <div class="container">
+          <!-- </div>
+          <div class="container"> -->
 
             <div class="gallery">
                <img class="gif" src="http://drive.google.com/uc?export=view&id=1ARuGSONsHcasfyIUXfcKrEmrddJ8AUZT" >
@@ -109,22 +109,24 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
            </div>
          </div>
 	  </div>
+	  <div class="desc">Examples of automatic detection of attention to screens from head-mounted camera video</div>
 	  	  
 	  <!--   3D SHAPE RECONSTRUCTION -->
 
-	  <h1> Single image 3D shape reconstruction </h1>
+	  <h1> Predictions of adverse outcomes from event data </h1>
+
 	  <p>
-	  Children learn to recover properties of 3D object shape well before they acquire facility in object categorization, and experience with shape may enable
-	  rapid object learning. The ability to learn 3D object shape from visual inputs is therefore a core building block in developmental approaches to visual learning. We have recently
-	  developed a novel architecture, <i>SDFNet</i> <a href="#SDFNet">[2]</a>, for supervised single image 3D shape reconstuction. Given a single RGB image of an object in an arbitrary pose, SDFNet
-	  can output a 3D model of the object encoded as a signed distance field.</p>
+	  Many common temporal data sources in clinical and mobile health applications consist of event data, in which measurements occur at arbitrary, irregularly-distributed time points. Visits to the clinic for assessment, which are common in treating conditions such as glaucoma or autism, rarely occur on a fixed schedule. Likewise, in mobile health applications it is common to perform Ecological Momentary Assessments (EMA) at randomly-chosen times throughout the day. We have developed two approaches to modeling such data: 
 
-    <p>
-    Our work identified three key issues that affect generalization performance in 3D shape reconstruction: the choice of coordinate representation, the benefit of intermediate representations (depth and normal sketches)
-    and the importance of realistic rendering. The last issue that we investigated regards large-scale evaluation of generalization. We are the first to show that 3-DOF viewer centered
-    coordinate representation experiences no drop in reconstruction performance on novel classes and that there is a significant room for improvement in performance of the 2.5D regressor. We demonstrated that
-    lighting variability and reflectance significantly impact reconstruction performance (0.31 for F-Score@1). We conducted our generalization evaluation on the largest scale to date and outperformed state-of-the-art baselines.
+	  <ul>
+   	      <li>Latent state models based on Continuous Time HMM (CT-HMM)</li>
+      	  <li>Deep learning models based on transformers</li>
+      </ul>
+	  </p>
 
+	  <p>
+	  A CT-HMM is an HMM in which both the transitions between hidden states and the arrival of observations can occur at arbitrary (continuous) times, rather than on a fixed clock. We have developed efficient parameter learning methods for CT-HMMs <a href="#CTnips">[Liu-NeurIPS]</a> and have demonstrated their utility in modeling the progression of glaucoma and Alzheimer’s disease (illustrated below). We have developed a spatiotemporal CT-HMM approach to modeling glaucoma progression, which can describe the temporal history of 2D visual field and retinal thickness maps <a href="#CTmlhc">[Supriya-ML4HC]</a> and accurately future patient status as a tool for treatment management. We have developed a predictive model for relapse in substance abuse by combining a CT-HMM model of latent behavioral states with a survival model for risk prediction <a href="#CTicml">[Moreno-iSurvive]</a>.</p>
+		  
     <!-- <b>ADD A FEW MORE DETAILS FROM OUR PAPER</b>. -->
 
 	  <div class="gifs">
