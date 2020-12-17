@@ -54,7 +54,7 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 </p> -->
 
     <p>
-	The development of effective treatments for chronic diseases, such as heart disease, diabetes, cancer, and Alzheimer’s, is a key global healthcare challenge. These conditions are primary drivers of healthcare spending and have a deleterious effect on quality of life and mortality. They are inextricably linked to modifiable health-related behavioral risk factors such as smoking, poor diet, and lack of physical activity. 
+	The development of effective treatments for chronic diseases, such as heart disease, diabetes, cancer, and Alzheimer’s, is a key global healthcare challenge. These conditions are primary drivers of healthcare spending and have a deleterious effect on quality of life and mortality. Fortunately, they are inextricably linked to modifiable health-related behavioral risk factors such as smoking, poor diet, and lack of physical activity. 
 		
 	Mobile health technology <a href="#MHBook">[Rehg-book]</a> provides a novel tool for supporting lifestyle modifications via behavioral interventions that can provide personalized guidance to patients, thereby reducing their risk factors and improving health outcomes. </p>
 		
@@ -111,7 +111,7 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 	  </div>
 	  <div class="desc">Examples of automatic detection of attention to screens from head-mounted camera video</div>
 	  	  
-	  <!--   3D SHAPE RECONSTRUCTION -->
+	  <!--    Predictions of adverse outcomes from event data -->
 
 	  <h1> Predictions of adverse outcomes from event data </h1>
 
@@ -125,111 +125,40 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 	  </p>
 
 	  <p>
-	  A CT-HMM is an HMM in which both the transitions between hidden states and the arrival of observations can occur at arbitrary (continuous) times, rather than on a fixed clock. We have developed efficient parameter learning methods for CT-HMMs <a href="#CTnips">[Liu-NeurIPS]</a> and have demonstrated their utility in modeling the progression of glaucoma and Alzheimer’s disease (illustrated below). We have developed a spatiotemporal CT-HMM approach to modeling glaucoma progression, which can describe the temporal history of 2D visual field and retinal thickness maps <a href="#CTmlhc">[Supriya-ML4HC]</a> and accurately future patient status as a tool for treatment management. We have developed a predictive model for relapse in substance abuse by combining a CT-HMM model of latent behavioral states with a survival model for risk prediction <a href="#CTicml">[Moreno-iSurvive]</a>.</p>
+	  A CT-HMM is an HMM in which both the transitions between hidden states and the arrival of observations can occur at arbitrary (continuous) times, rather than on a fixed clock. We have developed efficient parameter learning methods for CT-HMMs <a href="#CTnips">[Liu-NeurIPS]</a> and have demonstrated their utility in modeling the progression of glaucoma and Alzheimer’s disease (illustrated below). We have developed a spatiotemporal CT-HMM approach to modeling glaucoma progression, which can describe the temporal history of 2D visual field and retinal thickness maps <a href="#CTmlhc">[Supriya-ML4HC]</a> and accurately predict future patient status as a tool for treatment management. We have developed a predictive model for relapse in substance abuse by combining a CT-HMM model of latent behavioral states with a survival model for risk prediction <a href="#CTicml">[Moreno-iSurvive]</a>.</p>
 		  
     <!-- <b>ADD A FEW MORE DETAILS FROM OUR PAPER</b>. -->
 
-	  <div class="gifs">
-      	   <div class="container">
-           		<div class="desc">Seen Class</div>
-      	   		<div class="gallery">
-          			 <img class="gif" src="img/airplane_PRED.gif" >
-        			 <div class="desc">Predicted</div>
-      	   		</div>
-	       		<div class="gallery">
-           			 <img class="gif" src="img/airplane_GT.gif" >
-        			 <div class="desc">Ground Truth</div>
-      	  		</div>
-	   	   </div>
-       	   <div class="container">
-        		<div class="desc">Unseen Class</div>
-      			<div class="gallery">
-        		 	 <img class="gif" src="img/tub_PRED.gif" >
-        		 	 <div class="desc">Predicted</div>
-      			</div>
-      	   		<div class="gallery">
-           			 <img class="gif" src="img/tub_GT.gif" >
-        			 <div class="desc">Ground Truth</div>
-      	   		</div>
-      	   </div>
-    	   <div class="container">
-      	   		<div class="desc">Unseen Class</div>
-      			<div class="gallery">
-        			 <img class="gif" src="img/camera_PRED.gif" >
-        			 <div class="desc">Predicted</div>
-      			</div>
-      			<div class="gallery">
-        			 <img class="gif" src="img/camera_GT.gif" >
-        			 <div class="desc">Ground Truth</div>
-      			</div>
-    		</div>
-	  </div>
-	  <div class="desc">SDFNet reconstruction performance on classes seen during training and novel classes not seen during training</div>
+    <figure>
+       <img src="img/disease_prog.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
+      <figcaption> Decoding latent state trajectories of the progression of Glaucoma and Alzheimer's Disease</figcaption>
+    </figure>
+
+    <p>
+
+    We are currently developing transformer-based models for predicting EMA noncompliance. It is extremely common and useful to gather self-reported data from participants, for example as EMAs in behavioral studies and as electronic patient-reported outcomes (ePRO) in clinical trials. Noncompliance, in which participants fail to provide data at select time points, is a significant and well-recognized problem. We are developing a deep learning architecture which analyzes a sequence of EMA responses, along with other contextual cues, and predicts the likelihood that a participant will be noncompliant to the next EMA prompt. Our investigation leverages a novel dataset in which participant availability is automatically-assessed from sensor data prior to triggering EMA prompts, making it possible to distinguish noncompliance from overall nonresponse. We have shown that it is possible to predict noncompliance at an AUC of 0.76. </p>
+
+    <figure>
+       <img src="img/compliance.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
+      <figcaption> Analyzing compliance of EMAs with transformer-based architectures </figcaption>
+    </figure>
 
 
+	  <!--   Modeling and imputing missing measurements in longitudinal data -->
 
-	  <!--   CRIB SIMULATOR FOR VISUAL EXPERIENCES -->
-
-	  <h1> CRIB visual simulator for developmental ML </h1>
+	  <h1> Modeling and imputing missing measurements in longitudinal data
+ </h1>
 	  <p>
-	  The creation and validation of computational models of development can be facilitated by access to continous streams of visual imagery
-	  which mirror the statistical structured of the visual inputs that infants create during learning. While wearable cameras make it possible
-	  to record egocentric video from children in naturalistic settings, such datasets are inherently limited in scope and size. We have taken
-	  a first step towards creating a simulator that can generate unlimited amounts of visual data that mirror the types of self-generated visual experiences
-	  produced by children during object play.
+    Problems with missing data are endemic to clinical and mobile health applications. We are developing principled strategies for imputing missing observations from temporal data in the context of the hierarchical computations that naturally arise in mHealth biomarker inference. As a first step along these lines, we have addressed the problem of missing observations in panel count data. In many mHealth applications, participants are asked to self-report counts of behaviors of interest (e.g. number of cigarettes smoked since the last self-assessment). This is an example of a more general setting of modeling counting processes for adverse behavioral outcomes. We have recently addressed the problem of modeling the mean function of a counting process from panel count data with missing counts [Moreno-NeurIPS]. We developed a simple functional EM algorithm to wrap existing panel count data methods, and extended finite sample parametric EM theory to the functional setting via a novel use of Gateaux derivatives. Our results suggest that the standard imputation methods may be under-estimating actual counts.
+
 	  </p>
 
-    <div class="gifs">
-          <div class="container">
-              <div class="gallery">
-                 <img class="gif" src="http://drive.google.com/uc?export=view&id=1OMwDPu1vMeDplpmXkzKbcbww2g3KvsqQ" >
-                 <div class="desc">Plane</div>
+    <figure>
+       <img src="img/smoking_cess.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
+      <figcaption> Functional EM algorithm to predict missingness of temporal data </figcaption>
+    </figure>
 
-              </div>
-            <div class="gallery">
-               <img class="gif" src="http://drive.google.com/uc?export=view&id=1LtPrzfP0U5pMGXZnCRJR6HIrqRrybQpc" >
-               <div class="desc">Cup</div>
-
-            </div>
-          </div>
-          <div class="container">
-
-            <div class="gallery">
-               <img class="gif" src="http://drive.google.com/uc?export=view&id=1ARuGSONsHcasfyIUXfcKrEmrddJ8AUZT" >
-               <div class="desc">Truck</div>
-
-            </div>
-           <div class="gallery">
-              <img class="gif" src="http://drive.google.com/uc?export=view&id=1KVpeB0-HMnPrC-Fq1lYKMYqnLh0feQAk" >
-              <div class="desc">Bee</div>
-
-           </div>
-         </div>
-         <!-- <div class="container">
-          <div class="gallery">
-             <img class="gif" src="http://drive.google.com/uc?export=view&id=1nTldbL_cOlURDn5hLhM07aJUlaTNVyM_" >
-             <div class="desc">Spaceship</div>
-
-          </div>
-        </div> -->
-    </div>
-
-	  <!--   MODELING THE STATISTICAL PROPERTIES OF INFANT VISUAL OBJECT EXPERIENCES -->
-
-	  <h1> Modeling the statistical properties of infant visual object experiences </h1>
-	  <p>The ability to deploy infant-wearable cameras into the home environment, pioneered by Drs. Linda Smith and Chen Yu at Indiana Univ., has enabled the quantitative characterization
-	  of visual experiences in early infancy. The distribution of objects comprising the infant's visual experiences
-	  is highly right-skewed, with a small number of categories of familiar objects predominating. Moreover, the names of the objects occurring with
-	  high-frequency are among the very first object names that are normatively learned first by infants <a href="#EarlyStat">[3]</a>. These findings suggest that
-	  the power law distribution of early object experiences may play a role in facilitating infant object learning. We tested this hypothesis indirectly using a
-	  novel iterative machine teaching paradigm <a href="#IterTeach">[4]</a>. In this approach, a teacher network selects labeled examples to send to student network,
-	  with the examples chosen to optimize the student's learning rate. Using labeled egocentric images collected from infants as a training dataset, we compared the
-	  statistical properties of object orderings produced by the teaching network to the properties observed in naturalistic infant data. Our findings demonstrate a
-      qualitative similarity between the infant image ordering and the example ordering produced by the teacher.
-	  </p>
-
-
-
+	 
 	  <!--   MEMBERS AND COLLABORATORS -->
 
 	  <h1> Personnel </h1>
@@ -238,28 +167,22 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
           <div class="personnel_gallery">
 
                 <div class="column">
-                         <a href="https://zixuanh.com/">
-                         <img src="gt_personnel/zixuan_huang.jpg" >
+                         <a href="https://www.linkedin.com/in/varol-burak-aydemir-80013ba6">
+                         <img src="gt_personnel/burak.jpg" >
                          </a>
-                         <figcaption> Zixuan Huang </figcaption>
+                         <figcaption> Varol Burak Aydemir </figcaption>
                 </div>
                 <div class="column">
-                         <a href="http://ahumayun.com/">
-                         <img src="gt_personnel/ahmad_humayun.jpg" >
+                         <a href="https://boostedml.com/">
+                         <img src="gt_personnel/alex.jpg" >
                          </a>
-                         <figcaption> Dr. Ahmad Humayun </figcaption>
+                         <figcaption> Alexander Moreno </figcaption>
                 </div>
                 <div class="column">
-                         <a href="https://wyliu.com/">
-                         <img src="gt_personnel/weiyang_liu.png" >
+                         <a href="https://supriyanagesh94.github.io/">
+                         <img src="gt_personnel/supriya.jpg" >
                          </a>
-                         <figcaption> Weiyang Liu  </figcaption>
-                </div>
-                <div class="column">
-                         <a href="http://stefanstojanov.com/">
-                         <img src="gt_personnel/stefan_stojanov.jpg" >
-                         </a>
-                         <figcaption> Stefan Stojanov </figcaption>
+                         <figcaption> Supriya Nagesh  </figcaption>
                 </div>
 
 	  </div>
@@ -267,34 +190,28 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
               <!-- add institution -->
           <div class="personnel_gallery">
                 <div class="column">
-                         <a href="https://anhthai1997.wordpress.com/">
-                         <img src="gt_personnel/anh_thai.jpg" >
+                         <a href="https://maxxu05.github.io/">
+                         <img src="gt_personnel/max.jpg" >
                          </a>
-                         <figcaption> Anh Thai </figcaption>
+                         <figcaption> Max Xu </figcaption>
                          <a href="">
                 </div>
                 <div class="column">
                          <a href="">
-                         <img src="gt_personnel/vijay_uphadya.jpg" >
+                         <img src="gt_personnel/yun.jpg" >
                          </a>
-                         <figcaption> Vijay Uphadya </figcaption>
+                         <figcaption> Yun Zhang </figcaption>
                 </div>
                 <div class="column">
                          <a href="https://rehg.org/">
-                         <img src="gt_personnel/james_rehg.jpg" >
+                         <img src="gt_personnel/jim.jpg" >
                          </a>
                          <figcaption> <a href="https://rehg.org/">  Dr. James M. Rehg </a> </figcaption>
-                </div>
-                <div class="column">
-                         <a href="https://www.cc.gatech.edu/~lsong/">
-                         <img src="gt_personnel/le_song.png" >
-                         </a>
-                         <figcaption> Dr. Le Song </figcaption>
                 </div>
 
 	  </div>
 
-	  <h2> External Collaborators </h2>
+<!-- 	  <h2> External Collaborators </h2>
           <div class="personnel_gallery">
 
                 <div class="column">
@@ -322,32 +239,8 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
                          <figcaption> Dr. Chen Yu </br> (UT Austin) </figcaption>
                 </div>
 
-	  </div>
+	  </div> -->
 
-          <!--
-	  <ul>
-	  	  <li>Project Members at Georgia Tech</li>
-	  	  <ul>
-	      	  <li><a href="https://anhthai1997.wordpress.com/">Zixuan Huang</a></li>
-			  <li><a href="http://ahumayun.com/">Dr. Ahmad Humayun</a></li>
-			  <li><a href="https://wyliu.com/">Dr. Weiyang Liu</a></li>
-          	  <li><a href="https://anhthai1997.wordpress.com/">Anh Thai</a></li>
-          	  <li><a href="https://sstojanov.github.io/">Stefan Stojanov</a></li>
-          	  <li><a href="mailto:vupadhya6@gatech.edu">Vijay Upadhya</a></li>
-		  	  <li><a href="https://rehg.org/">Dr. James M. Rehg</a></li>
-			  <li><a href="https://www.cc.gatech.edu/~lsong/">Dr. Le Song</a></li>
-			  </ul>
-		  <li>External Collaborators</li>
-		  <ul>
-		  	  <li><a href="https://scholar.google.com/citations?user=IuINaBgAAAAJ&hl=en">Elizabeth M. Clerkin</a> (Indiana Univ.)</li>
-			  <li><a href="https://ieeexplore.ieee.org/author/37086031826">Elizabeth Hart</a> (Indiana Univ.)</li>
-			  <li><a href="https://about.me/charlene.tay">Charlene Tay</a> (Indiana Univ.)</li>
-			  <li><a href="https://psych.indiana.edu/directory/faculty/smith-linda.html">Dr. Linda B. Smith</a> (Indiana Univ.)</li>
-			  <li><a href="https://liberalarts.utexas.edu/psychology/faculty/cy2856">Dr. Chen Yu</a> (UT Austin)</li>
-			  </ul>
-		  </ul>
-
-          -->
 
 	  <!--   PROJECT FUNDING -->
 
