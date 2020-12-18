@@ -56,12 +56,12 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
     <p>
 	The development of effective treatments for chronic diseases, such as heart disease, diabetes, cancer, and Alzheimer’s, is a key global healthcare challenge. These conditions are primary drivers of healthcare spending and have a deleterious effect on quality of life and mortality. Fortunately, they are inextricably linked to modifiable health-related behavioral risk factors such as smoking, poor diet, and lack of physical activity. 
 		
-	Mobile health technology <a href="#MHBook">[Rehg-book]</a> provides a novel tool for supporting lifestyle modifications via behavioral interventions that can provide personalized guidance to patients, thereby reducing their risk factors and improving health outcomes. </p>
+	Mobile health technology <a href="#MHBook">[8]</a> provides a novel tool for supporting lifestyle modifications via behavioral interventions that can provide personalized guidance to patients, thereby reducing their risk factors and improving health outcomes. </p>
 		
 	<p>	
 	While app-based therapies based on self-report data (i.e. EMA) are increasingly available, passive sensing from wearables holds the promise of continuously monitoring key physiological and contextual variables, thereby providing long-term insight into patterns of behavior and risk at low burden to participants.
 		
-	We are developing novel biomarkers from wearable sensors to capture physiological and contextual variables, and machine learning methods for modeling longitudinal data. We work with the <a href="https://mdot.md2k.org/">mDOT</a> and <a href="https://md2k.org/">MD2K</a> <a href="#MD2KJamia">[Kumar-JAMIA]</a> centers and have a broad set of collaborators in engineering, behavioral science, and statistics, with a focus on smoking, sedentary behavior, and substance abuse. We currently work in three research areas:
+	We are developing novel biomarkers from wearable sensors to capture physiological and contextual variables, and machine learning methods for modeling longitudinal data. We work with the <a href="https://mdot.md2k.org/">mDOT</a> and <a href="https://md2k.org/">MD2K</a> <a href="#MD2KJamia">[3]</a> centers and have a broad set of collaborators in engineering, behavioral science, and statistics, with a focus on smoking, sedentary behavior, and substance abuse. We currently work in three research areas:
 
 	  <ul>
    	    <li>Biomarkers for physiological and contextual risk factors</li>
@@ -74,42 +74,40 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 
   <h1> Biomarkers for physiological and contextual risk factors</h1>
 
-	  <p> We are collaborating with the <a href="https://irl.gatech.edu/">Inan Lab</a> in developing novel biomarkers for hemodynamic parameters, such as pulmonary capillary wedge pressure, and in developing predictive models for heart failure (HF) clinical status (i.e. compensated vs decompensated). Decompensation in HF is a key driver of rehospitalization, resulting in increased mortality risk and cost of care. Using an implantable device to measure pulmonary artery pressure and titrate treatment has been shown to reduce the risk of decompensation, but the procedure is invasive, expensive, and unsuitable for some patients. We are exploring ballistocardiography and seismocardiography as a means to estimate heart failure status by measuring and analyzing the small vibrations that propagate through the body due to the mechanical action of the heart. Ballistocardiography (BCG) uses a modified weighing scale, and we have demonstrated classification of HF decompensation at an AUC of 0.78 using BCG data collected in a home environment <a href="#BCG">[Burak-TBME]</a>. Seismocardiography uses an accelerometer placed on the chest and is currently under investigation.</p>
+	  <p> We are collaborating with the <a href="https://irl.gatech.edu/">Inan Lab</a> in developing novel biomarkers for hemodynamic parameters, such as pulmonary capillary wedge pressure, and in developing predictive models for heart failure (HF) clinical status (i.e. compensated vs decompensated). Decompensation in HF is a key driver of rehospitalization, resulting in increased mortality risk and cost of care. Using an implantable device to measure pulmonary artery pressure and titrate treatment has been shown to reduce the risk of decompensation, but the procedure is invasive, expensive, and unsuitable for some patients. We are exploring ballistocardiography and seismocardiography as a means to estimate heart failure status by measuring and analyzing the small vibrations that propagate through the body due to the mechanical action of the heart. Ballistocardiography (BCG) uses a modified weighing scale, and we have demonstrated classification of HF decompensation at an AUC of 0.78 using BCG data collected in a home environment <a href="#BCG">[1]</a>. Seismocardiography uses an accelerometer placed on the chest and is currently under investigation.</p>
 	  
 	  <figure>
-	     <img src="img/scg_example.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
+        <center>
+	     <img src="img/scg_example.png" alt="" >    <!-- style="width:90%"  width="1877" height="777" -->
 		  <figcaption>Seismocardiography (SCG) signals from a wearable patch attached to the sternum. ECG and 3-axis accelerometery capture the electrical and mechanical signatures of heart beats</figcaption>
+           </center>
+
 	  </figure>
 
 	  <p>
-	  We are also developing biomarkers for contextual variables based on passively-collected signals from wearable sensors. We have collaborated with the MD2K center in developing a biomarker for smoking opportunity, which captures the situational factors (such as proximity to locations in which smoking is permitted) which can precipitate relapse during a quit attempt <a href="#Context">[Moreno-IMWUT]</a>. We have also developed a novel biomarker that uses a wearable camera to quantify exposure to screens, a known risk factor for sedentary behavior <a href="#TV">[Yun-TV]</a>. Below we illustrate several examples of attention to TVs and mobile devices inferred from wearable camera video (without eye tracking). A key challenge in contextual sensing is the accurate synchronization of multiple wearable modalities, and in particular wearable cameras, to a common timeline. We have developed an automatic synchronization approach, known as SyncWISE, and have demonstrated its effectiveness in aligning video and accelerometry signals <a href="#Sync">[Yun-Synch]</a>.</p>
+	  We are also developing biomarkers for contextual variables based on passively-collected signals from wearable sensors. We have collaborated with the MD2K center in developing a biomarker for smoking opportunity, which captures the situational factors (such as proximity to locations in which smoking is permitted) which can precipitate relapse during a quit attempt <a href="#Context">[2]</a>. We have also developed a novel biomarker that uses a wearable camera to quantify exposure to screens, a known risk factor for sedentary behavior <a href="#TV">[9]</a>. Below we illustrate several examples of attention to TVs and mobile devices inferred from wearable camera video (without eye tracking). A key challenge in contextual sensing is the accurate synchronization of multiple wearable modalities, and in particular wearable cameras, to a common timeline. We have developed an automatic synchronization approach, known as SyncWISE, and have demonstrated its effectiveness in aligning video and accelerometry signals <a href="#Sync">[Yun-Synch]</a>.</p>
 	  
-	  <div class="gifs">
-          <div class="container">
+    <div class="gifs">
               <div class="gallery">
-                 <img class="gif" src="http://drive.google.com/uc?export=view&id=1OMwDPu1vMeDplpmXkzKbcbww2g3KvsqQ" >
-                 <div class="desc">Plane</div>
+                 <img src="img/yun_TV_figures/vlcsnap-00001.png" >
+                 <div class="desc">(a)</div>
               </div>
             <div class="gallery">
-               <img class="gif" src="http://drive.google.com/uc?export=view&id=1LtPrzfP0U5pMGXZnCRJR6HIrqRrybQpc" >
-               <div class="desc">Cup</div>
+               <img src="img/yun_TV_figures/vlcsnap-00003.png" >
+               <div class="desc">(b)</div>
             </div>
-          <!-- </div>
-          <div class="container"> -->
-
+    </div>
+    <div class="gifs">
+              <div class="gallery">
+                 <img src="img/yun_TV_figures/vlcsnap-00004.png" >
+                 <div class="desc">(c)</div>
+              </div>
             <div class="gallery">
-               <img class="gif" src="http://drive.google.com/uc?export=view&id=1ARuGSONsHcasfyIUXfcKrEmrddJ8AUZT" >
-               <div class="desc">Truck</div>
-
-            </div>
-            <div class="gallery">
-              <img class="gif" src="http://drive.google.com/uc?export=view&id=1KVpeB0-HMnPrC-Fq1lYKMYqnLh0feQAk" >
-              <div class="desc">Bee</div>
-
-           </div>
-         </div>
-	  </div>
-	  <div class="desc">Examples of automatic detection of attention to screens from head-mounted camera video</div>
+               <img src="img/yun_TV_figures/vlcsnap-00005.png" >
+               <div class="desc">(d)</div>
+              </div>
+    </div>
+	  <div class="desc">Examples of automatic detection of attention to multiple types of screens from head-mounted camera video. Red bounding boxes in are detected as screen and classified as being watched. The green circle in figure (d) is the measured point of gaze produced by the eye tracker. </div>
 	  	  
 	  <!--    Predictions of adverse outcomes from event data -->
 
@@ -125,13 +123,15 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 	  </p>
 
 	  <p>
-	  A CT-HMM is an HMM in which both the transitions between hidden states and the arrival of observations can occur at arbitrary (continuous) times, rather than on a fixed clock. We have developed efficient parameter learning methods for CT-HMMs <a href="#CTnips">[Liu-NeurIPS]</a> and have demonstrated their utility in modeling the progression of glaucoma and Alzheimer’s disease (illustrated below). We have developed a spatiotemporal CT-HMM approach to modeling glaucoma progression, which can describe the temporal history of 2D visual field and retinal thickness maps <a href="#CTmlhc">[Supriya-ML4HC]</a> and accurately predict future patient status as a tool for treatment management. We have developed a predictive model for relapse in substance abuse by combining a CT-HMM model of latent behavioral states with a survival model for risk prediction <a href="#CTicml">[Moreno-iSurvive]</a>.</p>
+	  A CT-HMM is an HMM in which both the transitions between hidden states and the arrival of observations can occur at arbitrary (continuous) times, rather than on a fixed clock. We have developed efficient parameter learning methods for CT-HMMs <a href="#CTnips">[4]</a> and have demonstrated their utility in modeling the progression of glaucoma and Alzheimer’s disease (illustrated below). We have developed a spatiotemporal CT-HMM approach to modeling glaucoma progression, which can describe the temporal history of 2D visual field and retinal thickness maps <a href="#CTmlhc">[7]</a> and accurately predict future patient status as a tool for treatment management. We have developed a predictive model for relapse in substance abuse by combining a CT-HMM model of latent behavioral states with a survival model for risk prediction <a href="#CTicml">[Moreno-iSurvive]</a>.</p>
 		  
     <!-- <b>ADD A FEW MORE DETAILS FROM OUR PAPER</b>. -->
 
     <figure>
+      <center>
        <img src="img/disease_prog.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
       <figcaption> Decoding latent state trajectories of the progression of Glaucoma and Alzheimer's Disease</figcaption>
+      </center>
     </figure>
 
     <p>
@@ -139,8 +139,10 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
     We are currently developing transformer-based models for predicting EMA noncompliance. It is extremely common and useful to gather self-reported data from participants, for example as EMAs in behavioral studies and as electronic patient-reported outcomes (ePRO) in clinical trials. Noncompliance, in which participants fail to provide data at select time points, is a significant and well-recognized problem. We are developing a deep learning architecture which analyzes a sequence of EMA responses, along with other contextual cues, and predicts the likelihood that a participant will be noncompliant to the next EMA prompt. Our investigation leverages a novel dataset in which participant availability is automatically-assessed from sensor data prior to triggering EMA prompts, making it possible to distinguish noncompliance from overall nonresponse. We have shown that it is possible to predict noncompliance at an AUC of 0.76. </p>
 
     <figure>
+      <center>
        <img src="img/compliance.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
       <figcaption> Analyzing compliance of EMAs with transformer-based architectures </figcaption>
+      </center>
     </figure>
 
 
@@ -149,13 +151,15 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 	  <h1> Modeling and imputing missing measurements in longitudinal data
  </h1>
 	  <p>
-    Problems with missing data are endemic to clinical and mobile health applications. We are developing principled strategies for imputing missing observations from temporal data in the context of the hierarchical computations that naturally arise in mHealth biomarker inference. As a first step along these lines, we have addressed the problem of missing observations in panel count data. In many mHealth applications, participants are asked to self-report counts of behaviors of interest (e.g. number of cigarettes smoked since the last self-assessment). This is an example of a more general setting of modeling counting processes for adverse behavioral outcomes. We have recently addressed the problem of modeling the mean function of a counting process from panel count data with missing counts [Moreno-NeurIPS]. We developed a simple functional EM algorithm to wrap existing panel count data methods, and extended finite sample parametric EM theory to the functional setting via a novel use of Gateaux derivatives. Our results suggest that the standard imputation methods may be under-estimating actual counts.
+    Problems with missing data are endemic to clinical and mobile health applications. We are developing principled strategies for imputing missing observations from temporal data in the context of the hierarchical computations that naturally arise in mHealth biomarker inference. As a first step along these lines, we have addressed the problem of missing observations in panel count data. In many mHealth applications, participants are asked to self-report counts of behaviors of interest (e.g. number of cigarettes smoked since the last self-assessment). This is an example of a more general setting of modeling counting processes for adverse behavioral outcomes. We have recently addressed the problem of modeling the mean function of a counting process from panel count data with missing counts <a href="#impnips">[6]</a>. We developed a simple functional EM algorithm to wrap existing panel count data methods, and extended finite sample parametric EM theory to the functional setting via a novel use of Gateaux derivatives. Our results suggest that the standard imputation methods may be under-estimating actual counts.
 
 	  </p>
 
     <figure>
+      <center>
        <img src="img/smoking_cess.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
       <figcaption> Functional EM algorithm to predict missingness of temporal data </figcaption>
+      </center>
     </figure>
 
 	 
@@ -253,38 +257,29 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 		  </ul>
 
 
-		  <!--
-<p>
-  When evaluated on 3 Degree-of-Freedom Viewer Centered (3 DOF VC)&mdash;object pose varies along azimuth, elevation and tilt,
-  our empirical findings show marginal decrease in performance between seen and unseen classes for the 3 DOF VC model.
-  This is new evidence that it is possible to learn a general shape representation with correct depth estimation and 3 DOF VC training.
-  </p>
-<center><img src="img/representation_img.png" ></center>
-<div class="desc"> Quantitative evaluation of 3 DOF VC shows high performance on both seen and unseen categories. Model is trained on ground truth depth and normal images.</div>
-
-<h1> Generalization Across Different Datasets </h1>
-<center><img src="img/abc_shapenet_img.png" ></center>
-<div class="desc"> Sample images of our renders of the four most common ShapeNet categories and of objects from ABC. It is evident that the two datasets have different shape properties.</div>
-
-<p>
-To further test the generalization ability of SDFNet, we train it one one shape dataset and test it on a significantly different shape dataset. Our findings show that when trained on ABC and tested on the 42 unseen categories of ShapeNet, 3 DOF VC SDFNet obtains comparable performance to SDFNet trained on the 13 ShapeNet categories. SDFNet trained on ShapeNet performs relatively worse when tested on ABC.
-</p>
-<center><img src="img/shapenet_abc_PRED_img.png" ></center>
-<div class="desc"> Qualitative comparison of models trained on ABC and tested on ShapeNet and vice-versa. Note the good reconstruction quality on the occluded part of the object.</div>
-
-		  -->
 
 <h1> References  </h1>
 <ol>
-    <li><a name="CLRep">Stojanov, S.</a>, Mishra, S., Thai, N. A., Dhanda, N., Humayun, A., Yu, C., Smith, L. B., and Rehg, J. M. (2019).
-		<a href="https://iolfcv.github.io/">Incremental Object Learning from Contiguous Views.</a> In <i>Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR 19)</i>.</li>
-	<li><a name="SDFnet">Thai, A.</a>, Stojanov, S., Upadhya, V., Rehg, J. M. (2020).
-		<a href="https://devlearning-gt.github.io/3DShapeGen/">3D Reconstruction of Novel Object Shapes from Single Images.</a> <cite>arXiv preprint:2006.07752.</cite></li>
-	<li><a name="EarlyStat">Clerkin, E. M.</a>, Hart, E., Rehg, J. M., Yu, C., & Smith, L. B. (2017).
-		<a href="https://royalsocietypublishing.org/doi/full/10.1098/rstb.2016.0055">Real-world visual statistics and infants’ first-learned object names.</a>
-		<i>Phil. Trans. of the Royal Society B: Biological Sciences</i>, 372(20160055), 1–10.</li>
-	<li><a name="IterTeach">Liu, W.</a>, Dai, B., Humayun, A., Tay, C., Yu, C., Smith, L. B., Rehg, J. M., and Song, L. (2017).
-		<a href="https://arxiv.org/abs/1705.10470">Iterative Machine Teaching.</a> In <i>Proc. 34th Intl. Conf. on Machine Learning (ICML 17)</i> (p. PMLR 70:2149-2158).</li>
+    <li> <a name="BCG">V. B. Aydemir </a> , S. Nagesh, M. M. H. Shandhi, J. Fan, L. Klein, M. Etemadi, J. A. Heller, O. T. Inan, and J. M. Rehg, <a href="https://pubmed.ncbi.nlm.nih.gov/31425011/">Classification of Decompensated Heart Failure From Clinical and Home Ballistocardiography.</a> IEEE Transactions on Biomedical Engineering, vol. 67, no. 5, pp. 1303–1313, 2020. </li>
+
+    <li> <a name="Context">Chatterjee, S. </a> , Moreno, A., Lizotte, S. L., Akther, S., Ertin, E., Fagundes, C. P., ... & Kumar, S. (2020). <a href="https://dl.acm.org/doi/pdf/10.1145/3380987?casa_token=OX3oVaS6pUEAAAAA:T6SyETjRnlKKjSGmM9asgOsgPuHgFpt65Kg0K10V679iRUrVZ3x3PKUVlEmGkLa9ZySLcbwMktKr7g"> SmokingOpp: Detecting the Smoking Opportunity Context Using Mobile Sensors</a>. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 4(1), 1-26.  </li>
+
+    <li> <a name="MD2KJamia">Kumar, S. </a> , Abowd, G. D., Abraham, W. T., Al’Absi, M., Gayle Beck, J., Chau, D. H.,  Condie, T., Conroy, D.E., Ertin, E., Estrin, D., Ganesan, D., Lam, C., Marlin, B., Marsh, C.B., Murphy, S.A., Nahum-Shani, I., Patrick, K., Rehg, J.M., Sharmin, M., Shetty, V., Sim, I., Spring, B., Srivastava, M., Wetter, D. W. (2015). <a href="https://doi.org/10.1093/jamia/ocv056"> Center of excellence for mobile sensor data-to-knowledge (MD2K).</a> Journal of the American Medical Informatics Association, 22(6), 1137–1142.  </li>
+
+    <li> <a name="CTnips"> Liu, Y. Y.</a> , Li, S., Li, F., Song, L., & Rehg, J. M. (2015). <a href="https://papers.nips.cc/paper/2015/file/a591024321c5e2bdbd23ed35f0574dde-Paper.pdf"> Efficient learning of continuous-time hidden markov models for disease progression.</a> In Advances in neural information processing systems (pp. 3600-3608).  </li>
+
+    <li> <a name="CTicml"> Dempsey, W. H.</a> Dempsey, W. H., Moreno, A., Scott, C. K., Dennis, M. L., Gustafson, D. H., Murphy, S. A., & Rehg, J. M. (2017). <a href="http://proceedings.mlr.press/v70/dempsey17a/dempsey17a.pdf"> iSurvive: an interpretable, event-time prediction model for mHealth. </a> Proceedings of machine learning research, 70, 970.  </li>
+
+    <li> <a name="impnips"> Moreno, A.</a>  , Wu, Z., Yap, J. R., Lam, C., Wetter, D., Nahum-Shani, I., ... & Rehg, J. M. (2020). <a href="https://papers.nips.cc/paper/2020/file/e56eea9a45b153de634b23780365f976-Paper.pdf"> A Robust Functional EM Algorithm for Incomplete Panel Count Data. </a> Advances in Neural Information Processing Systems, 33.  </li>
+
+    <li> <a name="CTmlhc"> Nagesh, S.</a>, Moreno, A., Ishikawa, H., Wollstein, G., Schuman, J. S. (2019). <a href="http://proceedings.mlr.press/v106/nagesh19a/nagesh19a.pdf"> A Spatiotemporal Approach to Predicting Glaucoma Progression Using a CT-HMM. </a>  Machine Learning for Healthcare Conference (pp. 140-159).  </li>
+
+    <li>  <a name="MHBook"> Rehg, J. M. </a>, Murphy, S. A., & Kumar, S. (2017). <a href="https://doi.org/10.1007/978-3-319-51394-2">Mobile Health: Sensors, Analytic Methods, and Applications. </a> Springer. </li>
+
+    <li> <a name="TV"> Yun C. Zhang</a> , James M. Rehg. <a href="https://dl.acm.org/doi/10.1145/3214291 "> Watching the TV watchers. </a>  Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 2, 2, Article 88 (July 2018). </li>
+
+    <li> <a name="Sync"> Yun C. Zhang</a>*, Shibo Zhang*, Miao Liu, Elyse Daly, Samuel Battalio, Santosh Kumar, Bonnie Spring, James M. Rehg, and Nabil Alshurafa. 2020. <a href=" https://dl.acm.org/doi/abs/10.1145/3411824"> SyncWISE: Window Induced Shift Estimation for Synchronization of Video and Accelerometry from Wearable Sensors.</a>  Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 4, 3, Article 107 (September 2020). </li>
+
 
 <!--
 		  <li><a name="GenRe">Zhang, X., Zhang, Z., Zhang, C., Tenenbaum, J., Freeman, B., & Wu, J. (2018). Learning to reconstruct shapes from unseen classes.
