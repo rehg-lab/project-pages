@@ -55,9 +55,14 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 </p> -->
 
     <p>
-	The development of effective treatments for chronic diseases, such as heart disease, diabetes, cancer, and Alzheimer’s, is a key global healthcare challenge. These conditions are primary drivers of healthcare spending and have a deleterious effect on quality of life and mortality. Fortunately, they are inextricably linked to modifiable health-related behavioral risk factors such as smoking, poor diet, and lack of physical activity. 
+	The development of effective treatments for chronic diseases, such as heart disease, diabetes, cancer, and Alzheimer’s, 
+  is a key global healthcare challenge. These conditions are primary drivers of healthcare spending and have a deleterious 
+  effect on quality of life and mortality. Fortunately, they are inextricably linked to modifiable health-related behavioral 
+  risk factors such as smoking, poor diet, and lack of physical activity. 
 		
-	Mobile health technology <a href="#MHBook">[8]</a> provides a novel tool for supporting lifestyle modifications via behavioral interventions that can provide personalized guidance to patients, thereby reducing their risk factors and improving health outcomes. </p>
+	Mobile health technology <a href="#MHBook">[8]</a> provides a novel tool for supporting lifestyle 
+  modifications via behavioral interventions that can provide personalized guidance to patients, 
+  thereby reducing their risk factors and improving health outcomes. </p>
 		
 	<p>	
 	While app-based therapies based on self-report data (i.e. EMA) are increasingly available, passive sensing from wearables holds the promise of continuously monitoring key physiological and contextual variables, thereby providing long-term insight into patterns of behavior and risk at low burden to participants.
@@ -65,11 +70,38 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 	We are developing novel biomarkers from wearable sensors to capture physiological and contextual variables, and machine learning methods for modeling longitudinal data. We work with the <a href="https://mdot.md2k.org/">mDOT</a> and <a href="https://md2k.org/">MD2K</a> <a href="#MD2KJamia">[3]</a> centers and have a broad set of collaborators in engineering, behavioral science, and statistics, with a focus on smoking, sedentary behavior, and substance abuse. We currently work in three research areas:
 
 	  <ul>
+        <li>Modeling and imputing missing measurements in Mobile Health data</li>
    	    <li>Biomarkers for physiological and contextual risk factors</li>
-      	  <li>Predictions of adverse outcomes from event data</li>
-      	  <li>Modeling and imputing missing measurements in longitudinal data</li>
+      	<li>Predictions of adverse outcomes from event data</li>
+
       </ul>
 	  </p>
+
+     <!--   IMPUTE  -->
+
+  <h1> Modeling and imputing missing measurements in Mobile Health data </h1>
+
+  <p> Problems with missing data are endemic to clinical and mobile health applications. 
+    We are developing principled strategies for imputing missing observations from temporal data in the context of the hierarchical 
+    computations that naturally arise in mHealth biomarker inference. 
+    We have recently addressed the problem of modeling the mean function of a counting process in mobile survey data with missing counts 
+    <a href="#impnips">[6]</a>, and proposed novel mHealth pulsative signal (e.g. ECG and PPG) imputation challenge, PulseImpute. 
+    Prior work time-series imputation work fails in our setting, but our BDC Transformer demonstrates the potential of exploiting signal structure for 
+    pulsative signal imputation. Pulsative signal imputation over long gaps as well as reconstruction of features tied to Diagnosis are key unsolved mHealth challenges, and we hope that our challenge can drive future work in this critical and unique challenge. 
+  
+  </p>
+  
+  <figure>
+      <center>
+     <img src="img/pulseimpute.png" alt="" >    <!-- style="width:90%"  width="1877" height="777" -->
+    <figcaption> 
+      BDC Transformer is able to reconstruct the rhythm of the signals very well and consistently has the lowest reconstruction error among all imputation methods. 
+      However, it struggles in the middle of long missingness gaps.
+    </figcaption>
+         </center>
+
+  </figure>
+
 
 	  <!--   BIOMARKERS  -->
 
@@ -85,31 +117,6 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 
 	  </figure>
 
-	  <p>
-	  We are also developing biomarkers for contextual variables based on passively-collected signals from wearable sensors. We have collaborated with the MD2K center in developing a biomarker for smoking opportunity, which captures the situational factors (such as proximity to locations in which smoking is permitted) which can precipitate relapse during a quit attempt <a href="#Context">[2]</a>. We have also developed a novel biomarker that uses a wearable camera to quantify exposure to screens, a known risk factor for sedentary behavior <a href="#TV">[9]</a>. Below we illustrate several examples of attention to TVs and mobile devices inferred from wearable camera video (without eye tracking). A key challenge in contextual sensing is the accurate synchronization of multiple wearable modalities, and in particular wearable cameras, to a common timeline. We have developed an automatic synchronization approach, known as SyncWISE, and have demonstrated its effectiveness in aligning video and accelerometry signals <a href="#Sync">[Yun-Synch]</a>.</p>
-	  
-    <div class="gifs">
-              <div class="gallery">
-                 <img src="img/yun_TV_figures/vlcsnap-00001.png" >
-                 <div class="desc">(a)</div>
-              </div>
-            <div class="gallery">
-               <img src="img/yun_TV_figures/vlcsnap-00003.png" >
-               <div class="desc">(b)</div>
-            </div>
-    </div>
-    <div class="gifs">
-              <div class="gallery">
-                 <img src="img/yun_TV_figures/vlcsnap-00004.png" >
-                 <div class="desc">(c)</div>
-              </div>
-            <div class="gallery">
-               <img src="img/yun_TV_figures/vlcsnap-00005.png" >
-               <div class="desc">(d)</div>
-              </div>
-    </div>
-	  <div class="desc">Examples of automatic detection of attention to multiple types of screens from head-mounted camera video. Red bounding boxes in are detected as screen and classified as being watched. The green circle in figure (d) is the measured point of gaze produced by the eye tracker. </div>
-	  	  
 	  <!--    Predictions of adverse outcomes from event data -->
 
 	  <h1> Predictions of adverse outcomes from event data </h1>
@@ -136,63 +143,15 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
     </figure>
 
     <p>
-
-    We are currently developing transformer-based models for predicting EMA noncompliance. It is extremely common and useful to gather self-reported data from participants, for example as EMAs in behavioral studies and as electronic patient-reported outcomes (ePRO) in clinical trials. Noncompliance, in which participants fail to provide data at select time points, is a significant and well-recognized problem. We are developing a deep learning architecture which analyzes a sequence of EMA responses, along with other contextual cues, and predicts the likelihood that a participant will be noncompliant to the next EMA prompt. Our investigation leverages a novel dataset in which participant availability is automatically-assessed from sensor data prior to triggering EMA prompts, making it possible to distinguish noncompliance from overall nonresponse. We have shown that it is possible to predict noncompliance at an AUC of 0.76. </p>
-
-    <figure>
-      <center>
-       <img src="img/compliance.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
-      <figcaption> Analyzing compliance of EMAs with transformer-based architectures </figcaption>
-      </center>
-    </figure>
-
-
-	  <!--   Modeling and imputing missing measurements in longitudinal data -->
-
-	  <h1> Modeling and imputing missing measurements in longitudinal data
- </h1>
-	  <p>
-    Problems with missing data are endemic to clinical and mobile health applications. We are developing principled strategies for imputing missing observations from temporal data in the context of the hierarchical computations that naturally arise in mHealth biomarker inference. As a first step along these lines, we have addressed the problem of missing observations in panel count data. In many mHealth applications, participants are asked to self-report counts of behaviors of interest (e.g. number of cigarettes smoked since the last self-assessment). This is an example of a more general setting of modeling counting processes for adverse behavioral outcomes. We have recently addressed the problem of modeling the mean function of a counting process from panel count data with missing counts <a href="#impnips">[6]</a>. We developed a simple functional EM algorithm to wrap existing panel count data methods, and extended finite sample parametric EM theory to the functional setting via a novel use of Gateaux derivatives. Our results suggest that the standard imputation methods may be under-estimating actual counts.
-
-	  </p>
-
-    <figure>
-      <center>
-       <img src="img/smoking_cess.png" alt="">    <!-- style="width:90%"  width="1877" height="777" -->
-      <figcaption> Functional EM algorithm to predict missingness of temporal data </figcaption>
-      </center>
-    </figure>
-
 	 
 	  <!--   MEMBERS AND COLLABORATORS -->
 
 	  <h1> Personnel </h1>
 	  
 	  <h2> Georgia Tech </h2>
-          <div class="personnel_gallery">
 
-                <div class="column">
-                         <a href="https://www.linkedin.com/in/varol-burak-aydemir-80013ba6">
-                         <img src="gt_personnel/burak.jpg" >
-                         </a>
-                         <figcaption> Varol Burak Aydemir </figcaption>
-                </div>
-                <div class="column">
-                         <a href="https://boostedml.com/">
-                         <img src="gt_personnel/alex.jpg" >
-                         </a>
-                         <figcaption> Alexander Moreno </figcaption>
-                </div>
-                <div class="column">
-                         <a href="https://supriyanagesh94.github.io/">
-                         <img src="gt_personnel/supriya.jpg" >
-                         </a>
-                         <figcaption> Supriya Nagesh  </figcaption>
-                </div>
+                
 
-	  </div>
-
-              <!-- add institution -->
           <div class="personnel_gallery">
                 <div class="column">
                          <a href="https://maxxu05.github.io/">
@@ -202,10 +161,10 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
                          <a href="">
                 </div>
                 <div class="column">
-                         <a href="">
-                         <img src="gt_personnel/yun.jpg" >
-                         </a>
-                         <figcaption> Yun Zhang </figcaption>
+                  <a href="https://www.linkedin.com/in/varol-burak-aydemir-80013ba6">
+                  <img src="gt_personnel/burak.jpg" >
+                  </a>
+                  <figcaption> Varol Burak Aydemir </figcaption>
                 </div>
                 <div class="column">
                          <a href="https://rehg.org/">
@@ -251,7 +210,9 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
 
 	  <h1> Project Funding </h1>
 	  <ul>
-	  	  <li> NSF Awards <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1320348">RI 1320348</a>,
+        <li> NIH Awards: P41-EB028242-01A1, 7-R01-MD010362-03
+	  	  <li> NSF Awards: NSF <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2039655&HistoricalAwards=false">
+          GRFP DGE-2039655</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1320348">RI 1320348</a>,
 		  	   <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1524565">BCS 1524565</a>,
 			   <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1936970">RAISE 1936970</a></li>
 	      <li> Gifts from Xerox PARC and Intel Research</li>
@@ -276,11 +237,6 @@ A key challenge in single image 3D shape reconstruction is to ensure that deep m
     <li> <a name="CTmlhc"> Nagesh, S.</a>, Moreno, A., Ishikawa, H., Wollstein, G., Schuman, J. S. (2019). <a href="http://proceedings.mlr.press/v106/nagesh19a/nagesh19a.pdf"> A Spatiotemporal Approach to Predicting Glaucoma Progression Using a CT-HMM. </a>  Machine Learning for Healthcare Conference (pp. 140-159).  </li>
 
     <li>  <a name="MHBook"> Rehg, J. M. </a>, Murphy, S. A., & Kumar, S. (2017). <a href="https://doi.org/10.1007/978-3-319-51394-2">Mobile Health: Sensors, Analytic Methods, and Applications. </a> Springer. </li>
-
-    <li> <a name="TV"> Yun C. Zhang</a> , James M. Rehg. <a href="https://dl.acm.org/doi/10.1145/3214291 "> Watching the TV watchers. </a>  Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 2, 2, Article 88 (July 2018). </li>
-
-    <li> <a name="Sync"> Yun C. Zhang</a>*, Shibo Zhang*, Miao Liu, Elyse Daly, Samuel Battalio, Santosh Kumar, Bonnie Spring, James M. Rehg, and Nabil Alshurafa. 2020. <a href=" https://dl.acm.org/doi/abs/10.1145/3411824"> SyncWISE: Window Induced Shift Estimation for Synchronization of Video and Accelerometry from Wearable Sensors.</a>  Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 4, 3, Article 107 (September 2020). </li>
-
 
 <!--
 		  <li><a name="GenRe">Zhang, X., Zhang, Z., Zhang, C., Tenenbaum, J., Freeman, B., & Wu, J. (2018). Learning to reconstruct shapes from unseen classes.
